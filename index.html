@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practic1</title>
+</head>
+<style>
+#header{
+    padding: 0 4px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+} 
+.ss{
+    align-items: center;
+    display: flex;
+    margin-left: 6px;
+    padding: 4px 8px;
+    font-size: 1.2em;
+    text-decoration: none;
+    text-transform: uppercase; 
+    letter-spacing: 0.5px;
+}
+h1{
+  font: 20px Georgia;
+  align-content: center;
+}
+
+</style>
+<body>
+    <script>
+        function _for(num){
+            let result = '';
+            for(let i = 0; i < num.length; i++){
+                result += `<a style="font-size: 15px; margin: 0 2px; padding: 5px; text-decoration: none; color: white; border: 3px solid white" href="#">${num[i]}</a>\n`;
+            }
+            return result;
+        }
+        function generateHeader(title, navitems, bgcolor, fontcolor){
+            document.write(`<div id="header" style="background-color: ${bgcolor}; color: ${fontcolor}; border:3px solid black;">
+                                <h1>${title}</h1>
+                                <div style="color: ${fontcolor}" class="ss">
+                                    ${_for(navitems)}
+                                </div>
+                            </div>`);
+
+        }
+        generateHeader(`Обитель Царя`,['Тронный зал','Правила','Sentiniel','Scourge'],`blue`,`white`);
+    </script>
+</body>
+</html>
